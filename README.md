@@ -1,5 +1,35 @@
 # Book Scraper + REST API (Python / Flask)
 
+## 🌐 Live API
+
+**Base URL**: https://book-scraper-dfvt.onrender.com
+
+> **Note:** The free instance may take 30-60 seconds to wake up on the first request.
+
+---
+
+## 🧪 Testing the Live API
+
+1. Open your browser or use a tool like [Hoppscotch](https://hoppscotch.io) or Postman
+2. Try these endpoints directly in your browser:
+
+**Get all books:**
+https://book-scraper-dfvt.onrender.com/books
+
+**Filter by price (books under £20):**
+https://book-scraper-dfvt.onrender.com/books?max_price=20
+
+**Limit results:**
+https://book-scraper-dfvt.onrender.com/books?limit=5
+
+**Combine filters:**
+https://book-scraper-dfvt.onrender.com/books?max_price=15&limit=3
+
+**Stats endpoint:**
+https://book-scraper-dfvt.onrender.com/books/stats
+
+---
+
 ## 📌 Description
 
 A production-structured web scraper that crawls all 1,000 books across 50 pages from [books.toscrape.com](http://books.toscrape.com), stores the data in SQLite, and exposes it through a queryable Flask REST API.
