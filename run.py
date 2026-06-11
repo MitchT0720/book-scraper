@@ -5,6 +5,7 @@ from scraper.storage import init_db, save_books
 from api.app import app
 from apscheduler.schedulers.background import BackgroundScheduler
 import time
+import os
 
 def scrape():
     print("Starting scrape...")
@@ -33,4 +34,5 @@ if __name__ == "__main__":
     scheduler.add_job(scrape, "interval", hours=6)
     scheduler.start()
 
-    app.run(port=5001)
+    port = int(os.environ.get("PORT", 5001))
+    app.run(host="0.0.0.0", port=port)
